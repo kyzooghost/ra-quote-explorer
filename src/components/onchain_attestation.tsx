@@ -134,7 +134,14 @@ export const DcapVerifyForm = ({ checksum }: DcapVerifyFormProps) => {
     network: Deployment,
   ): Promise<VerificationResult> => {
     try {
-      const response = await fetch(`/raw/${checksum}`);
+      const response = await fetch(
+        `/raw/${checksum}`,
+        {
+          headers: {
+            Accept: 'application/octet-stream', // Ensure the server knows you're requesting binary data
+          },
+        }
+      );
       if (!response.ok) {
         throw new Error(
           `Failed to fetch quote: ${response.status} ${response.statusText}`,
