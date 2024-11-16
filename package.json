@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "API_PREFIX=http://verifier-api:8000 next dev --turbo",
+    "dev": "API_PREFIX=http://3.25.205.182:8000 next dev --turbo",
     "build": "next build",
     "start": "next start",
     "lint": "biome lint",

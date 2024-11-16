@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  quote-ui:
+    image: node:18
+    container_name: quote-ui
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/usr/src/app
+    working_dir: /usr/src/app
+    command: >
+        bash -c "npm i
+        && npm run dev"
