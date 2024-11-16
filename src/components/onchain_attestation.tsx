@@ -10,7 +10,7 @@ import {
   type Chain,
   type Hex,
 } from "viem";
-import { sepolia, holesky } from "viem/chains";
+import { sepolia, holesky, mantleSepoliaTestnet } from "viem/chains";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import {
@@ -80,21 +80,21 @@ const automataMainnet: Chain = {
 
 const NETWORKS: Deployment[] = [
   {
-    network: sepolia,
-    contractAddress: "0x76A3657F2d6c5C66733e9b69ACaDadCd0B68788b",
+    network: mantleSepoliaTestnet,
+    contractAddress: "0xDB45428b0fa82A087ACe3e5d249bd6c102c04756",
   },
-  {
-    network: holesky,
-    contractAddress: '0x133303659F51d75ED216FD98a0B70CbCD75339b2',
-  },
-  {
-    network: automataTestnet,
-    contractAddress: '0xefE368b17D137E86298eec8EbC5502fb56d27832',
-  },
-  {
-    network: automataMainnet,
-    contractAddress: '0xE26E11B257856B0bEBc4C759aaBDdea72B64351F',
-  },
+  // {
+  //   network: holesky,
+  //   contractAddress: '0x133303659F51d75ED216FD98a0B70CbCD75339b2',
+  // },
+  // {
+  //   network: automataTestnet,
+  //   contractAddress: '0xefE368b17D137E86298eec8EbC5502fb56d27832',
+  // },
+  // {
+  //   network: automataMainnet,
+  //   contractAddress: '0xE26E11B257856B0bEBc4C759aaBDdea72B64351F',
+  // },
 ];
 
 const DEFAULT_NETWORK = NETWORKS[0];

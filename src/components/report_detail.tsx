@@ -44,7 +44,7 @@ const DcapVerificationStatus = ({ isVerified }: { isVerified: boolean }) => {
           </AlertTitle>
           <AlertDescription className="text-sm mt-1">
             {isVerified
-              ? "Quote has passed TEE environment DCAP verification and is safe to use."
+              ? "Quote has passed TEE environment verification and is safe to use."
               : "Quote failed DCAP verification. Please check TEE environment configuration."}
           </AlertDescription>
         </div>
