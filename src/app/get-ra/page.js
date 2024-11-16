@@ -28,16 +28,9 @@ export default function GetRAPage() {
     }, [isPending, orchestratorId, workerId, taskId]);
 
     const handleGetRA = async () => {
-        try {
-            const data = await ofetch('http://3.25.205.182:4000');
-            console.log(data);
-        } catch (e) {
-            console.error(e);
-        }
-
         startTransition(async () => {
             try {
-                const data = await ofetch('http://3.25.205.182:4000');
+                const data = await ofetch('/api/get-ra');
                 setRAQuote(data);
                 console.log(data);
             } catch (error) {

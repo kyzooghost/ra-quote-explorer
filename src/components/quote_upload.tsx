@@ -48,8 +48,6 @@ async function uploadUint8Array(data: Uint8Array) {
   });
   const formData = new FormData();
   formData.append("file", file);
-
-  // return await ofetch("https://ra-quote-explorer.vercel.app/api/upload", {
   return await ofetch("/api/upload", {
     method: "POST",
     body: formData,
@@ -62,8 +60,6 @@ async function uploadUint8Array(data: Uint8Array) {
 async function uploadFile(file: File) {
   const formData = new FormData();
   formData.append("file", file);
-
-  // return await ofetch("https://ra-quote-explorer.vercel.app/api/upload", {
   return await ofetch("/api/upload", {
     method: "POST",
     body: formData,
