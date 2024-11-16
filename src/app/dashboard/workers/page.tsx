@@ -33,7 +33,7 @@ const WorkerDashboard = () => {
     }
   ];
 
-  const getStatusColor = (status) => {
+  const getStatusColor = (status: string) => {
     switch (status) {
       case "online": return "bg-green-500";
       case "offline": return "bg-gray-500";
@@ -41,7 +41,7 @@ const WorkerDashboard = () => {
     }
   };
 
-  const getTaskStatusBadge = (status) => {
+  const getTaskStatusBadge = (status: string) => {
     switch (status) {
       case "running":
         return <Badge variant="secondary" className="bg-blue-100 text-blue-800">
