@@ -10,7 +10,7 @@ import {
   type Chain,
   type Hex,
 } from "viem";
-import { sepolia, holesky, mantleSepoliaTestnet } from "viem/chains";
+import { sepolia, holesky, mantleSepoliaTestnet, lineaSepolia } from "viem/chains";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import {
@@ -82,6 +82,10 @@ const NETWORKS: Deployment[] = [
   {
     network: mantleSepoliaTestnet,
     contractAddress: "0xDB45428b0fa82A087ACe3e5d249bd6c102c04756",
+  },
+  {
+    network: lineaSepolia,
+    contractAddress: "0xa4b1acdfc492d5b03c8bd86ed49ad4240c9e5486",
   },
   // {
   //   network: holesky,

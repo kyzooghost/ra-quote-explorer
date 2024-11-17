@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useTransition } from "react";
 import { AlertCircle, Upload } from "lucide-react";
 import { ofetch } from "ofetch";
 import { useRouter } from "next/navigation";
@@ -70,6 +70,8 @@ export function QuoteUpload() {
   const [hex, setHex] = useState("");
   const [hasError, setHasError] = useState(false);
   const router = useRouter();
+  const [isPending, startTransition] = useTransition();
+
   return (
     <form>
       <Tabs defaultValue="hex" className="">
@@ -108,6 +110,7 @@ export function QuoteUpload() {
             </CardContent>
             <CardFooter>
               <Button
+                disabled={isPending}
                 onClick={async (evt) => {
                   evt.preventDefault();
                   try {
@@ -123,7 +126,7 @@ export function QuoteUpload() {
                   }
                 }}
               >
-                Verify
+              {isPending ? "Verifying..." : "Verify"}
               </Button>
             </CardFooter>
           </Card>
