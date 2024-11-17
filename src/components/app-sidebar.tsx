@@ -1,4 +1,4 @@
-import { Calendar, Home, Inbox, Search, Settings } from "lucide-react"
+import { Calendar, Home, Inbox, Search, Settings, ShieldCheck, Grab } from "lucide-react"
 
 import {
   Sidebar,
@@ -22,6 +22,16 @@ const items = [
     title: "Workers",
     url: "/dashboard/workers",
     icon: Inbox,
+  },
+  {
+    title: "Get Remote Attestation",
+    url: "/dashboard/get-ra",
+    icon: Grab,
+  },
+  {
+    title: "Verify Remote Attestation",
+    url: "/",
+    icon: ShieldCheck,
   },
 ]
 
