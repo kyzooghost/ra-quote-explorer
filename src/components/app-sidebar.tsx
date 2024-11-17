@@ -30,7 +30,7 @@ const items = [
   },
   {
     title: "Verify Remote Attestation",
-    url: "/",
+    url: "/dashboard/verify-ra",
     icon: ShieldCheck,
   },
 ]
