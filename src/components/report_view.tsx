@@ -28,7 +28,7 @@ export function ReportView({
               size="icon"
               className="hover:bg-gray-100"
             >
-              <Link href="/">
+              <Link href="/dashboard">
                 <ArrowLeft className="h-5 w-5" />
               </Link>
             </Button>
