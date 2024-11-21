@@ -113,17 +113,19 @@ export function QuoteUpload() {
                 disabled={isPending}
                 onClick={async (evt) => {
                   evt.preventDefault();
-                  try {
-                    const data = hexToUint8Array(hex);
-                    const { success, checksum } = await uploadUint8Array(data);
-                    if (success) {
-                      router.push(`reports/${checksum}`);
-                    } else {
-                      setHasError(true);
+                  startTransition(async () => {
+                    try {
+                      const data = hexToUint8Array(hex);
+                      const { success, checksum } = await uploadUint8Array(data);
+                      if (success) {
+                        router.push(`reports/${checksum}`);
+                      } else {
+                        setHasError(true);
+                      }
+                    } catch (error) {
+                      console.error(error);
                     }
-                  } catch (error) {
-                    console.error(error);
-                  }
+                  })
                 }}
               >
               {isPending ? "Verifying..." : "Verify"}

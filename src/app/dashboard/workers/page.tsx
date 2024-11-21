@@ -31,6 +31,14 @@ const WorkerDashboard = () => {
         { id: "9e61d3b4-2f1c-4808-bed5-90cbd4452c98", name: "zk-onramp-payment-mohak", status: "failed", startTime: "10:45 AM", duration: "33m" },
       ]
     }
+    // {
+    //   id: 4,
+    //   name: "ZK Coprocessor",
+    //   status: "online",
+    //   tasks: [
+    //     { id: "9e61d3b4-2f1c-4808-bed5-90cbd4452c98", name: "zk-coprocessor", status: "scheduled", startTime: "11:17 AM", duration: "1m" },
+    //   ]
+    // },
   ];
 
   const getStatusColor = (status: string) => {

@@ -78,6 +78,24 @@ const automataMainnet: Chain = {
   },
 }
 
+const zircuitTestnet: Chain = {
+  id: 48899,
+  name: 'Zircuit Testnet',
+  nativeCurrency: { name: 'Ethereum', symbol: 'ETH', decimals: 18 },
+  rpcUrls: {
+    default: {
+      http: ['https://zircuit1-testnet.p2pify.com'],
+    },
+  },
+  blockExplorers: {
+    default: {
+      name: 'Zircuit Testnet Explorer',
+      url: 'https://explorer.testnet.zircuit.com',
+      apiUrl: 'https://explorer.testnet.zircuit.com/api',
+    },
+  },
+}
+
 const NETWORKS: Deployment[] = [
   {
     network: mantleSepoliaTestnet,
@@ -87,6 +105,10 @@ const NETWORKS: Deployment[] = [
     network: lineaSepolia,
     contractAddress: "0xa4b1acdfc492d5b03c8bd86ed49ad4240c9e5486",
   },
+  // {
+  //   network: zircuitTestnet,
+  //   contractAddress: "0x7a4137fC69d2460B52c0eb85BC1B9B6aE5e781f6",
+  // },
   // {
   //   network: holesky,
   //   contractAddress: '0x133303659F51d75ED216FD98a0B70CbCD75339b2',
